@@ -18,7 +18,7 @@ class Testing(Base):
     TESTING = True
     DEBUG = True
     # use a separate db
-    SQLALCHEMY_DATABASE_URI = "postgresql:///my_test_db"
+    SQLALCHEMY_DATABASE_URI = os.getenv('SQLALCHEMY_TEST_DATABASE_URI') #"postgresql:///my_test_db"
 
 
 class Production(Base):
