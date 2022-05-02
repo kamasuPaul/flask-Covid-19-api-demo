@@ -4,7 +4,7 @@ from app.models import db
 from server import app
 
 # import models
-# from app.models.first import First
+from app.models import country
 
 # register app and db with migration class
 migrate = Migrate(app, db)
