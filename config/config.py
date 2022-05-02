@@ -9,7 +9,7 @@ class Development(Base):
     """ development config """
 
     DEBUG = True
-    SQLALCHEMY_DATABASE_URI = "postgresql:///dev_db"
+    SQLALCHEMY_DATABASE_URI = os.getenv("SQLALCHEMY_DATABASE_URI") # "postgresql://postgres:root@localhost/dev_db"
 
 
 class Testing(Base):
