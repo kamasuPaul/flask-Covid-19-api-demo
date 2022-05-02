@@ -1,8 +1,8 @@
 from ..models import db
-from sqlalchemy.dialects.postgresql import JSON
+from app.models.root_model import RootModel
 
 
-class Country(db.Model):
+class Country(RootModel):
     __tablename__ = 'countries'
 
     id = db.Column(db.Integer, primary_key=True)
