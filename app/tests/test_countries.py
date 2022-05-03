@@ -20,3 +20,21 @@ class TestCountries:
     def test_refresh_route_returns_200(self):
         response = self.client.get('countries/refresh')
         assert response.status_code == 200
+    #test get all countries returns 200
+    def test_get_all_countries_returns_200(self):
+        response = self.client.get('countries')
+        assert response.status_code == 200
+        
+    #test get all countries returns json
+    def test_get_all_countries_returns_json(self):
+        response = self.client.get('countries')
+        assert response.content_type == 'application/json'
+
+    #test get all countries returns correct data
+    def test_get_all_countries_returns_correct_data(self):
+        response = self.client.get('countries')
+        assert response.json['status'] == 'success'
+        assert response.json['message'] == 'Countries retrieved successfully'
+        assert response.json['data'] == []
+
+
