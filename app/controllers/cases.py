@@ -6,7 +6,7 @@ class CasesView(Resource):
     #fetches data from the api and refresh the database
     def get(self):
         self.fetchData()
-        return dict(status="success", message="Refreshing data")
+        return dict(status="success", message="Data refreshed successfully")
 
 
     def fetchData(self):
