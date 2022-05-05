@@ -1,6 +1,10 @@
 # Covid 19 Flask App
 
-This is a flask restful api for covid 19 data. It contains endpoints for getting data about covid 19 cases from different countries. It contains 3 endpoints
+This is a flask restful api for covid 19 data. It contains endpoints for getting data about covid 19 cases from different countries. 
+
+This project gets all its data from an external  [Media Group API](https://github.com/M-Media-Group/Covid-19-API) and caches it a postgress database.
+
+This API contains 3 endpoints
 
 1. GET `/countries`
    This is to get confirmed cases, recovered cases and death case of covid 19 for all countries.
@@ -61,6 +65,8 @@ This is a flask restful api for covid 19 data. It contains endpoints for getting
     }
    }
    ```
+
+> A frontend that utilises this api is available at [kamasuPaul/covid-19-dashboard-react-app](https://github.com/kamasuPaul/covid-19-dashboard-react-app)
 
 ### Project Setup
 
